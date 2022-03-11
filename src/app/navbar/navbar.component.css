@@ -1,0 +1,37 @@
+.navbar {
+    width: 100%;
+    background-color: blue;
+    overflow: auto;
+}
+
+.navbar li {
+    /* padding: 12px; */
+    font-size: 17px;
+    float: right;
+    color: rgb(206, 162, 202);
+    text-decoration: none;
+    margin-left: 0%;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    font-weight: 800;
+    background-image: linear-gradient( rgb(230, 191, 19), rgb(224, 106, 28), rgb(212, 51, 186));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Righteous', cursive;
+}
+
+.navbar a:hover {
+    background-color: teal;
+}
+
+.nav-link :active {
+    background-color: green;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */

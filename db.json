@@ -1,0 +1,49 @@
+{
+    "users": [{
+        "name": "sushmitha",
+        "email": "sush@gmail.com",
+        "mobilenumber": "54654565567",
+        "address": "chennai",
+        "gender": "female",
+        "id": 1
+    }],
+    "signupuser": [{
+            "id": 1
+        },
+        {
+            "name": "pooja",
+            "email": "pooja@gmail.com",
+            "password": "pooja",
+            "mobilenumber": "565767",
+            "id": 2
+        },
+        {
+            "name": "dcgv",
+            "email": "a@gmail.com",
+            "password": "sxdfd",
+            "mobilenumber": "45t4e6",
+            "id": 3
+        },
+        {
+            "name": "cfbcf",
+            "email": "bcf@gmail.com",
+            "password": "dcvxv",
+            "mobilenumber": "4e6",
+            "id": 4
+        },
+        {
+            "name": "bfcvb",
+            "email": "bcv@gmail.com",
+            "password": "dxcbfc",
+            "mobilenumber": "5656",
+            "id": 5
+        },
+        {
+            "name": "dzc",
+            "email": "sdcf@gmail.com",
+            "password": "zdvdx",
+            "mobilenumber": "234243435",
+            "id": 6
+        }
+    ]
+}

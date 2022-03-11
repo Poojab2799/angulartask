@@ -1,0 +1,35 @@
+<section style="background-color: lavender;">
+    <div class="imgBx">
+        <img src="/assets/images/lll.jfif" alt="">
+    </div>
+    <div class="contentBx">
+        <div class="formBx">
+            <h2 style="color: black;">LOGIN</h2>
+            <form [formGroup]="login">
+                <div class="inputBx">
+                    <span>Username</span>
+                    <input type="text" placeholder="Enter Name" class="inp" formControlName="name" />
+                </div>
+                <div class="inputBx">
+                    <span>Password</span>
+                    <input type="password" placeholder="Enter Password" class="inp" formControlName="password" />
+                </div>
+                <div class="inputBx">
+                    <div *ngIf="login.invalid && login.touched">
+                        <span style="color: red;">Enter the credentials to login</span>
+                    </div>
+                    <button class="btn" [disabled]="login.invalid" (click)="loginSubmit(login.value);login.reset()">LOGIN</button>
+                </div>
+                <div class="inputBx">
+                    <p style="font-size:15px;font-weight:500">Don't have an account? <a class="a" style="color: #ff4584" (click)="goToSignup()">Sign Up</a></p>
+                </div>
+                <div *ngIf="submitted" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Good Job!</strong> You have logged in successfully ..
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,173 @@
+<body id="i1">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);background-color: rgb(240, 227, 227);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Register</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1 style="color: rgb(241, 228, 202);margin-top: 15%;font-weight: 900;" class="text-center">Explore Oppurtunities</h1>
+                <p style="color: rgb(247, 215, 215);" class="text-left">What’s destination next? Is it better technology? A better you? Or a better community of makers? Wherever you desire to go, we give you the tools, the techniques, and the teams to navigate the journey. So you’re inspired to build what’s
+                    next, ensure your career never stands still, and navigate further together. Move forward. Take the world with you.</p>
+            </div>
+            <div class="col-md-5">
+                <form #usersForm="ngForm" (ngSubmit)="getUserDetails(usersForm.value);usersForm.resetForm()">
+                    <div class="row">
+                        <h3 style="color: white;font-size: 20px;" class="text-left">Registration Form<i style="text-align: right;margin-left: 60%;" class="fa fa-pencil"></i></h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <label style="color: white;" for="" class="label col-md-2 control-label">Username</label>
+                        <div class="col-md-10">
+                            <input type="text" #name="ngModel" required ngModel name="name" pattern="[a-zA-Z]+$" class="form-control" id="floatingInput" placeholder="Enter your full name">
+                        </div>
+
+                        <div *ngIf="name.touched && name.invalid">
+                            <div class="row">
+                                <span *ngIf="name.errors?.['required']" style="color: red;">Username is required.</span>
+                            </div>
+                            <div class="row">
+                                <span *ngIf="name.errors?.['pattern']" style="color: red;">Username should not contain numbers.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label style="color: white;" for="" class="label col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" #email="ngModel" required ngModel name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="floatingInput" placeholder="Enter your Email">
+                        </div>
+                        <div *ngIf="email.touched && email.invalid">
+                            <div class="row">
+                                <span *ngIf="email.errors?.['required']" style="color: red;">Mail id is required</span>
+                            </div>
+                            <div class="row">
+                                <span *ngIf="email.errors?.['pattern']" style="color: red;">Enter the valid mail id</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label style="color: white;" for="" class="label col-md-2 control-label">Contact</label>
+                        <div class="col-md-10">
+                            <input type="text" #mobile="ngModel" required ngModel name="mobilenumber" pattern="[0-9]+$" minlength="10" class="form-control" id="floatingInput" placeholder="Enter your Mobilenumber">
+                        </div>
+                        <div *ngIf="mobile.touched && mobile.invalid">
+                            <div class="row">
+                                <span *ngIf="mobile.errors?.['required']" style="color: red;">MobileNumber is required.</span>
+                            </div>
+                            <div class="row">
+                                <span *ngIf="mobile.errors?.['pattern']" style="color: red;">MobileNumber should contain numbers.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label style="color: white;" for="" class="label col-md-2 control-label">Address</label>
+                        <div class="col-md-10">
+                            <textarea style="height: 70%;" type="text" #address="ngModel" required ngModel name="address" pattern="[a-zA-Z0-9]+$" class="form-control" id="floatingInput" placeholder="Enter your Address"></textarea>
+                        </div>
+                        <div *ngIf="address.touched && address.invalid">
+                            <div class="row">
+                                <span *ngIf="address.errors?.['required']" style="color: red;">Address is required</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label style="color: white;" for="" class="label col-md-2 control-label">Gender</label>
+                            <div class="col-md-10">
+                                <label class="radio-inline">
+                                    <input required id="i1" #gender="ngModel" type="radio" name="gender" value="male" ngModel>
+                                    Male
+                                  </label>
+                                <label class="radio-inline">
+                                    <input required id="i1" #gender="ngModel" type="radio" name="gender" value="female" ngModel>
+                                    Female
+                                  </label>
+                                <label class="radio-inline">
+                                    <input required id="i1" #gender="ngModel" type="radio" name="gender" value="others" ngModel>
+                                  Others
+                                  </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button [disabled]="usersForm.invalid" data-bs-toggle="tooltip" data-bs-placement="top" title="Form submission" class="btn btn-primary" style="margin-left:45%;margin-top: 5%;margin-bottom: 4%;" mat-raised-button color="primary">Send<i class="fa fa-send"></i></button>
+                </form>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </symbol>
+          </svg>
+        <div class="container">
+            <div class="row" *ngIf="formSubmitted">
+                <div class="col-xs-12">
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <div>
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg> Good Job! You have registered successfully.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<div style="background-color: lavender;">
+    <div style="padding-top:5%;" class="container">
+        <table id="mytable" class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}} </td>
+                    <td> {{user.email}}</td>
+                    <td>{{user.mobilenumber}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.gender}}</td>
+                    <td><i data-bs-toggle="modal" data-bs-target="#exampleModal3" class="fa fa-trash" style="font-size: 20px;color:red;"></i>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" style="font-size: 20px;" id="exampleModalLabel3">Delete Confirmation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4 style="font-size: 20x;"> Are you sure to delete this record?</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button (click)="deleteData(user.id)" type="button" class="btn btn-success" data-bs-dismiss="modal">Ok</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br><br><br>
+    </div>
+</div>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>

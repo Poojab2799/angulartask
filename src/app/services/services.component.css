@@ -1,0 +1,12 @@
+/* .container {
+    position: relative;
+} */
+
+body {
+    background-color: lavender;
+    height: 350%;
+}
+
+.navbar a:hover {
+    background-color: rgb(170, 19, 150);
+}

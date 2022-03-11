@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <nav id="navbar-example2" class="navbar navbar-light bg-primary px-3">
+        <a style="color:rgb(240, 234, 147)" class="navbar-brand" href="#">Our Services</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link" (click)="inView(item1)">Software Development</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link" (click)="inView(item2)">Website Designing</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link" (click)="inView(item3)">Web Hosting</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link" (click)="inView(item4)">Domain Registration</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a style="color: rgb(231, 228, 13);" href="#">Home</a></li>
+            <li style="color: rgb(231, 228, 13);" class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <!-- <main class="text-center">
+        <section class="p-5"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 #item1 style="text-align:left;font-weight: 900;font-size: 25px;margin-top: 5%;">Software Development</h4>
+                    <p id="scrollspyHeading1" style="text-align: left;"> Software development is the process programmers use to build computer programs. The process, also known as the Software Development Life Cycle (SDLC), </p>
+                    <p style="text-align: left;">At Info Hut, we believe in providing our customers complete solutions for their business needs. The Info Hut team is dedicated to provide efficient software and solutions for retailers and related manufacturers.</p>
+                    <p style="text-align: left;"> The Retail division provides complete retail ERP solution along with Point of Sales (POS) system to take care of Billing, Store management, Inventory, Customer Loyalty CRM, ... </p>
+                    <!-- Button trigger modal -->
+                    <button style="text-align: center;margin-left: 35%;margin-top: 4%;" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Read More
+  </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title" id="exampleModalLabel">Software Development</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    At Info Hut, we believe in providing our customers complete solutions for their business needs. The Vinayak Infotech team is dedicated to provide efficient software and solutions for retailers and related manufacturers. The Retail division provides complete
+                                    retail ERP solution along with Point of Sales (POS) system to take care of Billing, Store management, Inventory, Customer Loyalty CRM, Inventory, purchasing, Chain Stores distribution, Finance & Accounts. We develop
+                                    software products for desktop applications, internet application, local area network applications. Some of the common features of our softwares are user friendly, backup & recovery facility, reporting facility, user
+                                    management with access permissions and privileges, etc. We provide user manual, client side training as well online training for how to use software. Our main Application Softwares are Payroll System, Finance Accounting
+                                    System, Inventory Management System , School Management System , Coaching Class Management System & Hospital Management System (HMS) . We also make above & other sofwares as per client requirements.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img style="margin-top: 5%;" src="/assets/images/ss.jfif" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- </section> -->
+
+        <section id="aboutsection" class="p-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img style="text-align: left;margin-left: 0%;" src="/assets/images/wd.jfif" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 #item2 style="text-align: left;font-weight: 900;font-size: 25px;">Website Designing</h4>
+                        <p style="text-align: left;">Website design has become inevitable to do business and highlighting its online presence in the modern competitive markets.</p>
+                        <p style="text-align: left;">Design is like art and is very crucial part in Website Making. It offers your business' first imression in the Internet World.We offers customer oriented website designing.We provide web design services from a small business to
+                            a large corporate.
+                        </p>
+                        <p style="text-align: left;"> Quality content is key for a successful website. Content that is topical, compelling...</p>
+                        <!-- Button trigger modal -->
+                        <button style="text-align: center;margin-left: 35%;margin-top: 4%;" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                Read More
+                              </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="exampleModalLabel11">Website designing</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Design like art and is very crucial part in Website Making. It offers your business' first imression in the Internet World.We at Vinayak Infotech offers customer oriented website designing. We provide web design services from a small business to a large
+                                        corporate. Quality content is key for a successful website. Content that is topical, compelling and well composed will always acquire links naturally over time. Research is vital for creating quality content.The
+                                        goal of most web designers is to create an attractive, easily accessible and functional website that will convince the visitor to do something. Creating such a website requires good graphic design, easy and intuitive
+                                        site navigation, logical site layout and good web copy. We make attractive, informative, user friendly and interactive web design services. We utilize the skills of experienced web designers and skilled programmers
+                                        who can convert your imagination into real one. We use various latest technologies like Asp.Net, Vb.Net , C# , Xhtml , Adobe Flash CS3 & Adobe Photoshop CS in Website development process.Flash is used to animate
+                                        graphics. JavaScript is used in browser to create a lot of cool effects such as swapping images when a mouse moves over an image, “ticker tapes”, links changing colors, etc. We at Vinayak Infotech offers customer
+                                        oriented website designing. We provide web design services for a small business to a large corporate. We provide attractive, informative, user friendly ,interactive and meaningful web design services.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="servicesection" class="p-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 #item3 style="text-align:left;font-weight: 900;font-size: 25px;">Web Hosting</h4>
+                        <p style="text-align: left;">Web Hosting is as much imortant as your website look , content and functionality. Because if your Web Server is cheap and has poor uptime then your Website is not worked properly and you can't get your probable clients. </p>
+                        <p style="text-align: left;">Our Web hosting server give you enough bandwidth or disk space, and the 99.9% uptime guarantee means your site is always going to be live without interruption for probable clients. Our Web Hosting server has tied up World's First
+                            Number Search Engine "GOOGLE".</p>
+                        <p style="text-align: left;"> We Host our client's Websites over the one of TOP 3 Quality & Trusted Hosting Server. </p>
+                        <!-- Button trigger modal -->
+                        <button style="text-align: center;margin-left: 35%;margin-top: 4%;" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+    Read More
+  </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="exampleModalLabel2">Website Hosting</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Web hosting is a service that allows organizations and individuals to post a website or web page onto the Internet. A web host, or web hosting service provider, is a business that provides the technologies and services needed for the website or webpage
+                                        to be viewed in the Internet.Our Web hosting server give you enough bandwidth or disk space, and the 99.9% uptime guarantee means your site is always going to be live without interruption for probable clients. Our
+                                        Web Hosting server has tied up World's First Number Search Engine "GOOGLE".We Host our client's Websites over the one of TOP 3 Quality & Trusted Hosting Server.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="/assets/images/wh.jfif" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="careersection" class="p-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img style="text-align: left;height: 100%;width: 100%; margin-left: 0%;" src="/assets/images/dm.jfif" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 #item4 style="text-align: left;font-weight: 900;font-size: 25px;">Domain Registration</h4>
+                        <p style="text-align: left;">Domain Name is the Name of your Website and because of that visitors can identify you. Domain Name selection is also important for all kind of business, generally it is related to your firm , service or business name.We put all
+                            our efforts to give domain name as per our clients requirments which is familiar to the visitors</p>
+                        <p style="text-align: left;">Each domain is a web property. Its value depends upon its name and its appeal. In today's world, it is extremely difficult to find a suitable domain since billions of domains have already been registered and almost every word and
+                            combination of words which you can find in a standard dictionary have been used. Still you can find good domain names if you are creative.</p>
+
+                        <!-- Button trigger modal -->
+                        <button style="text-align: center;margin-left: 35%;margin-top: 4%;" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                Read More
+                              </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="exampleModalLabel3">Domain Registration</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Domain Name is the Name of your Website and because of that visitors can identify you. Domain Name selection is also important for all kind of business, generally it is related to your firm , service or business name.We put all our efforts to give domain
+                                        name as per our clients requirments which is familiar to the visitors.Each domain is a web property. Its value depends upon its name and its appeal. In today's world, it is extremely difficult to find a suitable
+                                        domain since billions of domains have already been registered and almost every word and combination of words which you can find in a standard dictionary have been used. Still you can find good domain names if you
+                                        are creative.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+    </main> -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center;font-family: 'Righteous', cursive;color: rgb(133, 8, 122);">Projects progress based on technologies</h1>
+            <h5 style="font-size: 19px;font-weight: 500;">Software Development</h5>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="font-size: 19px;font-weight: 500;">Website Designing</h5>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="font-size: 19px;font-weight: 500;">Web Hosting</h5>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+            </div>
+        </div>
+        <div class="row">
+            <h5 style="font-size: 19px;font-weight: 500;">Domain Registration</h5>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+            </div>
+        </div>
+        <h1 style="text-align: center; margin-top: 6%; font-family: 'Righteous', cursive;">Our Partners</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="/assets/images/abby.png" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="/assets/images/blueprism.svg" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="/assets/images/UiPath-full-logo.svg" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img src="/assets/images/app.jfif" alt="">
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+    <br><br>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#myScrollSpy'
+        })
+    </script>
+</body>
+
+</html>

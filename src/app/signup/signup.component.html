@@ -1,0 +1,93 @@
+<section style="background-color: lavender;">
+    <div class="imgBx">
+        <img src="/assets/images/lll.jfif" alt="">
+    </div>
+    <div class="contentBx">
+        <div class="formBx">
+            <h2 style="color: black;margin-top:20%">REGISTER</h2>
+            <form [formGroup]="register">
+                <div class="inputBx">
+                    <span>Username</span>
+                    <input type="text" placeholder="Enter Name" class="inp" formControlName="name" />
+                    <div *ngIf="name.touched && name.invalid">
+                        <div class="row">
+                            <span *ngIf="name.errors?.['required']" style="color: red;">Username shouldn't be empty</span>
+                        </div>
+                    </div>
+                    <div *ngIf="name.dirty && name.invalid">
+                        <div class="row">
+                            <span *ngIf="name.errors?.['pattern']" style="color: red;">Username shouldn't contain numbers.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <span>Email</span>
+                    <input type="text" placeholder="Enter Email" class="inp" formControlName="email" />
+                    <div *ngIf="email.touched && email.invalid">
+                        <div class="row">
+                            <span *ngIf="email.errors?.['required']" style="color: red;">Email shouldn't be empty</span>
+                        </div>
+                    </div>
+                    <div *ngIf="email.dirty && email.invalid">
+                        <div class="row">
+                            <span *ngIf="email.errors?.['email']" style="color: red;">Enter the valid email(e.g:abc@gmail.com)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <span>Password</span>
+                    <input type="password" placeholder="Enter password" class="inp" formControlName="password" />
+                    <div *ngIf="password.dirty && password.invalid">
+
+                        <div class="row">
+                            <span *ngIf="password.errors?.['pattern']" style="color: red;">Password should contain atleast 8 characters</span>
+                        </div>
+                    </div>
+                    <div *ngIf="password.touched && password.invalid">
+                        <div class="row">
+                            <span *ngIf="password.errors?.['required']" style="color: red;">Password shouldn't be empty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <span>Contact Number</span>
+                    <input type="text" placeholder="Enter Number" class="inp" formControlName="mobilenumber" />
+                    <div *ngIf="mobilenumber.touched && mobilenumber.invalid">
+                        <div class="row">
+                            <span *ngIf="mobilenumber.errors?.['required']" style="color: red;">Mobilenumber shouldn't be empty</span>
+                        </div>
+                    </div>
+                    <div *ngIf="mobilenumber.dirty && mobilenumber.invalid">
+                        <div class="row">
+                            <span *ngIf="mobilenumber.errors?.['pattern']" style="color: red;">Mobilenumber only contain numbers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputBx">
+                    <button class="btn" [disabled]="register.invalid" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="registerSubmit(register.value);register.reset()">SIGNUP</button>
+                </div>
+                <div class="inputBx">
+                    <p style="font-size:15px;font-weight:500">Already have an account? <a class="a" style="color: #ff4584" (click)="goToLogin()">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div style="align-content: center;margin-left:60%;height: 100%;width: 50%;" class="modal-dialog">
+        <div style="height: 25%;background-color: lavender;" class="modal-content">
+            <!-- <div class="modal-header">
+               
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> -->
+            <div class="modal-header">
+                <h5 class="modal-title" style="margin-top:7% ; height: 5%;color: rgb(38, 11, 194);font-size:35px;text-align: center;margin-left:13%;padding-left: 16%;" id="exampleModalLabel">Good Job!</h5>
+                <button style="margin-right:5%;margin-top:7%" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5 style="margin-top:6%;color:black;font-size:20px;padding-left:5%">You have registered successfully on Info hut.</h5>
+            </div>
+        </div>
+    </div>
+</div>
